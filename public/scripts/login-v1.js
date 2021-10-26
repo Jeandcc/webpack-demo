@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebpack_demo=self.webpackChunkwebpack_demo||[]).push([["login-v1"],{778:(e,o,s)=>{const t=s(786).Z.getRandomInt(1,10);console.log(`Size is ${t}`)},786:(e,o,s)=>{s.d(o,{Z:()=>t});class t{static getRandomInt(e,o){return Math.floor(Math.random()*(o-e+1))+e}}}},e=>{e(e.s=778)}]);
