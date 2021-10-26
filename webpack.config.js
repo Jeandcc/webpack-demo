@@ -1,12 +1,12 @@
 import path from "path";
 import webpack from "webpack";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+import HashedModuleIDsPlugin from "./plugins/HashedModuleIDsPlugin.js";
 
 const IS_PROD = process.env.APP_ENV === "production";
 
 export default {
   mode: IS_PROD ? "production" : "development",
-
   name: IS_PROD ? "Public Pages" : "Local Overrides",
 
   module: {
@@ -25,6 +25,7 @@ export default {
   },
 
   plugins: [
+    new HashedModuleIDsPlugin(),
     new webpack.DefinePlugin({
       "process.env.APP_ENV": JSON.stringify(process.env.APP_ENV),
     }),
